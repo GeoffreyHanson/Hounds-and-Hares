@@ -64,25 +64,25 @@
     // var pieces = [];    
     // console.log(pieces);
 
-    function getPieces() {
-        $.get("/api/gameStart", function(data) {
-            console.log(data);
-            var pieces = [];
-            for (var i = 0; i < data.length; i++) {                
-                // console.log(data[i].id);
-                id = data[i].id;
+function getPieces() {
+    $.get("/api/gameStart", function(data) {
+        console.log(data);
+        var pieces = [];
+        for (var i = 0; i < data.length; i++) {                
+            // console.log(data[i].id);
+            id = data[i].id;
 
-                // console.log(data[i].cx);
-                currcx = data[i].cx;
+            // console.log(data[i].cx);
+            currcx = data[i].cx;
 
-                // console.log(data[i].cy);
-                currcy = data[i].cy;
-                
-                $("#"+id).attr({cx: currcx, cy: currcy});
-            }
-        });
-    }
-    getPieces();
+            // console.log(data[i].cy);
+            currcy = data[i].cy;
+            
+            $("#"+id).attr({cx: currcx, cy: currcy});
+        }
+    });
+}
+getPieces();
 
     
     
