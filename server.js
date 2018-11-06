@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const exphbs = require("express-handlebars");
+// const exphbs = require("express-handlebars");
 
 const db = require("./models");
 
@@ -12,18 +12,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
+// // Handlebars
+// app.engine(
+//   "handlebars",
+//   exphbs({
+//     defaultLayout: "main"
+//   })
+// );
+// app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
 
 const syncOptions = { force: false };
 
