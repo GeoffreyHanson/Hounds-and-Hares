@@ -19,19 +19,6 @@ function getPieces() {
 }
 getPieces();
 
-  
-  
-      
-  // $(document).on("click", ".node", movePieceOne);
-  // function movePieceOne(event) {
-  //     event.stopPropagation();
-  //     var newX = $(this).attr("cx"); 
-  //     var newY = $(this).attr("cy"); 
-  //     console.log(newX, newY); 
-  //     $("#1").attr({cx: newX, cy: newY});       
-  // }
-
-
 $("#1").on("click", function(event) {
     event.stopPropagation();
     var id = $(this).attr("id");
