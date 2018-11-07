@@ -22,8 +22,8 @@ app.use(express.static("public"));
 // app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes.js")(app);
-require("./routes/htmlRoutes.js")(app);
+require("./routes/apiroutes")(app);
+require("./routes/htmlRoutes")(app);
 
 const syncOptions = { force: false };
 
